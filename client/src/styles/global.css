@@ -1,0 +1,19 @@
+body {
+    height: 100svh;
+}
+
+.applications-table-wrapper {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+}
+
+.applications-table th,
+td {
+    text-align: center;
+}
+
+.new-record-btn {
+    align-self: center;
+    flex-shrink: 0;
+}

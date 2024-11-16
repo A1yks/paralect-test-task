@@ -1,0 +1,24 @@
+{
+    "name": "paralect-test-task",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+        "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+        "start": "pm2 start ecosystem.config.js --update-env",
+        "dev:server": "npm run dev --prefix server",
+        "dev:client": "npm run dev --prefix client",
+        "build:server": "npm run build --prefix server",
+        "build:client": "npm run build --prefix client",
+        "start:server": "npm run start --prefix server",
+        "start:client": "npm run start --prefix client",
+        "install-all": "npm install && concurrently \"npm install --prefix server\" \"npm install --prefix client\" \"npm install --prefix shared\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "concurrently": "^9.1.0",
+        "pm2": "^5.4.3"
+    }
+}
