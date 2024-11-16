@@ -1,3 +1,5 @@
+Ссылка: https://testtasks.hopto.org/paralect
+
 Проект написан на Next.js, API реализовано с помощью Express, база данных MongoDB.
 
 Переменные окружения клиента:
