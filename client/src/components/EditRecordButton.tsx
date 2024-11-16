@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon } from '@mantine/core';
+import { ActionIcon, Tooltip } from '@mantine/core';
 import { IconEdit } from '@tabler/icons-react';
 import RecordModal from './RecordModal';
 import { CreatedJobApplicationType } from '@shared/jobApplications/types';
@@ -16,9 +16,11 @@ export default function EditRecordButton({ record }: EditRecordButtonProps) {
 
     return (
         <>
-            <ActionIcon variant="subtle" onClick={handlers.open}>
-                <IconEdit />
-            </ActionIcon>
+            <Tooltip label="Редактировать">
+                <ActionIcon variant="subtle" onClick={handlers.open}>
+                    <IconEdit />
+                </ActionIcon>
+            </Tooltip>
             <RecordModal opened={opened} record={record} onClose={handlers.close} action={(newData) => updateRecord(record._id, newData)} />
         </>
     );
